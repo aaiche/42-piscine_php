@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<title>Balloon</title>
+	</head>
+	<style>
+		/*
+		#container {
+			width: 420px;
+			height: 420px;
+			position: relative;
+			background: black;
+			margin: auto;
+		}
+		*/
+	</style>
+
+	<body>
+		<div id="container">
+			<div id="animate" style="background-color: red; width: 200px; height: 200px; border-radius: 50%;" 
+				onclick="blowUpOnClick(this)" onmouseleave="goDownOnMouseLeave(this)">
+			</div>
+		</div>
+		<script>
+			function blowUpOnClick(elt) {
+				var c = elt.style.backgroundColor;
+				var w = parseInt(elt.style.width, 10);		// convert string "200px" to 200
+
+				//console.log(c);
+				//console.log(w);
+
+				// toggle colors
+				if (c == "red") {
+					elt.style.backgroundColor = "green";
+				} else if (c == "green") {
+					elt.style.backgroundColor = "blue";
+				} else if (c == "blue") {
+					elt.style.backgroundColor = "red";
+				}
+				// resize
+				if (w < 420) {
+					elt.style.width = w + 10 + 'px';
+					elt.style.height = w + 10 + 'px';
+				} else {
+					elt.style.width = 200 + 'px';
+					elt.style.height = 200 + 'px';
+				}
+			}
+
+			function goDownOnMouseLeave(elt) {
+				var c = elt.style.backgroundColor;
+				var w = parseInt(elt.style.width, 10)
+
+				//console.log(c);
+				//console.log(w);
+
+				// toggle colors
+				if (c == "red") {
+					elt.style.backgroundColor = "blue";
+				} else if (c == "green") {
+					elt.style.backgroundColor = "red";
+				} else if (c == "blue") {
+					elt.style.backgroundColor = "green";
+				}
+				if (w > 200) {
+					elt.style.width = w - 5 + 'px';
+					elt.style.height = w - 5 + 'px';
+				} else {
+					elt.style.width = 200 + 'px';
+					elt.style.height = 200 + 'px';
+				}
+			}
+		</script>
+	</body>
+</html>

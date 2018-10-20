@@ -1,0 +1,115 @@
+<html>
+	<head>
+		<title>Basic Calculator</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<form onsubmit ="myFunction()">
+			<fieldset>
+				<legend>Basic Calculator:</legend>
+				<input id="left_operand" type="text"/>
+				<select id="operand">
+					<option value="+">+</option>
+					<option value="-">-</option>
+					<option value="*">*</option>
+					<option value="/">/</option>
+					<option value="%">%</option>
+				</select>
+				<input id="right_operand" type="text"/>
+				<input type="submit" value="Try me!"/>
+			</fieldset>
+		</form>
+		<script>
+			"use strict";
+			function isNormalInteger(str) {
+				return /^(\+|\-)?(0|[1-9]\d*)$/.test(str);
+			}
+
+			function isOperandValid(x) {
+				if (isNormalInteger(x) && x >= 0 ) {
+					return true;
+				} else {
+					//console.log(x + " is not valid");
+					return false;
+				}
+			}
+
+			function msg(str) {
+				console.log(str);
+				alert(str);
+			}
+			
+			function add(x, y) {
+				return x + y;
+			}
+
+			function subtract(x, y) {
+				return x - y;
+			}
+
+			function multiply(x, y) {
+				return x * y;
+			}
+
+			function divide(x, y) {
+				if (y != 0) {
+					return x / y;
+				} else {
+					return "It’s over 9000!";
+				}
+			}
+
+			function modulo(x, y) {
+				if (y != 0) {
+					return x % y;
+				} else {
+					return "It’s over 9000!";
+				}
+			}
+
+			function pleaseUseMe() {
+				var	miliseconds = 30000;
+				setInterval(function() { alert("Please, use me...");}, miliseconds);
+			}
+
+			function myFunction() {
+				//get the value of left and right operand
+				var res = 0;
+				var	x = document.getElementById("left_operand").value;
+				var	y = document.getElementById("right_operand").value;
+				var	op = document.getElementById("operand").value;
+				if (!isOperandValid(x) || !isOperandValid(y)) {
+					/*
+					 * not required as it is not mentioned on the subject
+					 */
+					msg('Error :(');
+				} else {
+					x = parseInt(x, 10);
+					y = parseInt(y, 10);
+					/*
+					console.log(x);
+					console.log(op);
+					console.log(y);
+					*/
+					if (op == "+") {
+						res = add(x, y);
+						msg(res);
+					} else if (op == '-') {
+						res = subtract(x ,y);
+						msg(res);
+					} else if (op == '*') {
+						res = multiply(x, y);
+						msg(res);
+					} else if (op == '/') {
+						res = divide(x, y);
+						msg(res);
+					} else if (op == '%') {
+						res = modulo(x, y);
+						msg(res);
+					}
+				}
+			}
+			pleaseUseMe();
+		</script>
+	</body>
+</html>

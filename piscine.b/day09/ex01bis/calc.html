@@ -1,0 +1,114 @@
+<html>
+	<head>
+		<title>Basic Calculator using jquery</title>
+		<meta charset="utf-8">
+		<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script>
+			"use strict";
+			function msg(str) {
+				console.log(str);
+				alert(str);
+			}
+
+			function isNormalInteger(str) {
+				return /^(\+|\-)?(0|[1-9]\d*)$/.test(str);
+			}
+
+			function isOperandValid(x) {
+				if (isNormalInteger(x) && x >= 0 ) {
+					return true;
+				} else {
+					//console.log(x + " is not valid");
+					return false;
+				}
+			}
+
+			function add(x, y) {
+				return x + y;
+			}
+
+			function subtract(x, y) {
+				return x - y;
+			}
+
+			function multiply(x, y) {
+				return x * y;
+			}
+
+			function divide(x, y) {
+				if (y != 0) {
+					return x / y;
+				} else {
+					return "It’s over 9000!";
+				}
+			}
+
+			function modulo(x, y) {
+				if (y != 0) {
+					return x % y;
+				} else {
+					return "It’s over 9000!";
+				}
+			}
+
+			function pleaseUseMe() {
+				var	miliseconds = 30000;
+				setInterval(function() { alert("Please, use me...");}, miliseconds);
+			}
+
+			$(document).ready(function() {
+				$("form").submit(function() {
+					var res = 0;
+					var	x = $("#left_operand").val();
+					var	y = $("#right_operand").val();
+					var	op = $("#operand").val();
+					if (!isOperandValid(x) || !isOperandValid(y)) {
+						/*
+						 * not required as it is not mentioned on the subject
+						 */
+						msg('Error :(');
+					} else {
+						x = parseInt(x, 10);
+						y = parseInt(y, 10);
+						console.log(x + " " + op + " " + y + " = ");
+						if (op == "+") {
+							res = add(x, y);
+							msg(res);
+						} else if (op == '-') {
+							res = subtract(x ,y);
+							msg(res);
+						} else if (op == '*') {
+							res = multiply(x, y);
+							msg(res);
+						} else if (op == '/') {
+							res = divide(x, y);
+							msg(res);
+						} else if (op == '%') {
+							res = modulo(x, y);
+							msg(res);
+						}
+					}
+				});
+				pleaseUseMe();
+			});
+
+		</script>
+	</head>
+	<body>
+		<form> 
+			<fieldset>
+				<legend>Basic Calculator using jquery</legend>
+				<input id="left_operand" type="text"/>
+				<select id="operand">
+					<option value="+">+</option>
+					<option value="-">-</option>
+					<option value="*">*</option>
+					<option value="/">/</option>
+					<option value="%">%</option>
+				</select>
+				<input id="right_operand" type="text"/>
+				<input type="submit" value="Try me!"/>
+			</fieldset>
+		</form>
+	</body>
+</html>
