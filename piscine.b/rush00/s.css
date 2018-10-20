@@ -1,0 +1,950 @@
+/****GENERAL****/
+* {
+	border:1px solid red; 
+}
+
+body {
+	font-family: 'Verdana', Calibri, serif;
+	font-size: 16px;
+	margin: 0px;
+	padding: 0px;
+	background-color: rgba(64, 200, 130, 0.15);
+	height: 100%;
+}
+.site {
+	height: 100%;
+}
+.page {
+	width: 780px; /* pour les elts flottants */
+	margin: auto; /* pour centrer le contenu, car on a une largeur*/
+	font-family: 'Source sans Pro', Calibri, Tahoma, sans-serif;
+	font-size: 16px;
+}
+
+.header {
+	/*height: 250px;*/
+	border: 1px solid black;
+}
+
+.logo {
+	width: 20%;
+	/* height: 250px; */
+	float: left;
+	/* border: 1px solid black; */
+}
+
+.headlist {
+	width: 75%;
+	float: right;
+	height: 218px;
+	position: relative;
+	left: 10px;
+}
+.services {
+	height: 45px;
+	/* border: 1px solid black; */
+	/* width: 95%; */
+	background-color: purple;		
+	margin-bottom: 5px;
+}
+.services ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+.services li {
+	list-style-type: none;
+	display: inline-block;
+	padding: 12px 50px;
+	text-transform: uppercase;
+	font-size: 15px;	
+}
+.services .service_extra {
+	color: #0ebbc1;
+	
+}
+.services ul li:hover {
+	text-decoration: underline;
+	box-sizing: border-box;
+	color: #0ebbc1;
+	cursor: pointer;
+}
+
+
+.langue {
+	width: 15%;
+	/* height: 200px; */
+	float: left;
+	background-color: orange;	
+	margin-right: 10px;
+}
+
+.search {
+	width: 80%;
+	/* height: 200px; */
+	float: left;
+	background-color: green;		
+}
+
+.langue_search li {
+	list-style-type: none;
+	display: inline-block;
+	padding: 20px 55px;
+}
+
+.langue li {
+	list-style-type: none;
+	display: inline-block;
+	padding: 20px 55px;
+}
+.languagepicker {
+	/*background-color: #FFF;*/
+	display: inline-block;
+	padding: 0;
+/*	height: 40px;*/
+	margin: 0 50px 10px 0;
+	vertical-align: top;
+	float: left;
+}
+.languagepicker a {
+	color: #000;
+	text-decoration: none;
+}
+.languagepicker li {
+	display: block;
+	padding: 0px 20px;
+	line-height: 10px;
+	border-top: 1px solid #EEE;
+}
+.languagepicker li:hover{
+	background-color: #EEE;
+}
+.languagepicker li img {
+	margin-right: 15px;
+}
+.roundborders {
+	border-radius: 5px;
+}
+
+
+.search li {
+	list-style-type: none;
+	display: inline-block;
+	padding: 20px 55px;
+}
+.search input[type=text] {
+    margin-top: 10px;
+	width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+	background-image: url('images/searchicon.jpeg');
+	background-size: 45px 45px;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+	padding: 23px 77px;
+	
+}
+.search input[type=text] {
+	margin-top: 30px;
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('images/searchicon.jpeg');
+	background-position: 10px 10px; 
+	background-size: 45px 45px;
+    background-repeat: no-repeat;
+    -webkit-transition: width 0.4s ease-in-out;
+	transition: width 0.4s ease-in-out;
+	padding: 23px 77px;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+.compte {
+	width: 50%;
+	/* height: 200px; */
+	float: right;
+	background-color: grey;	
+	bottom: 0px;
+	right: 0px;
+}
+.compte {
+	position: absolute;
+
+}
+.compte ul {
+	margin: 0px;
+	padding: 0px;
+}
+.compte li {
+	list-style-type: none;
+	display: inline-block;
+	padding: 20px 30px;
+}
+
+.promotion {
+	position: absolute;
+	width: 27%;
+	/* height: 200px; */
+	float: left;
+	background-color: grey;	
+	bottom: 0px;
+	left: 205px;
+}
+
+/*
+ * header_list responsivite
+ */
+/* on traite la responsivite pour les largeurs d ecran inferieur a 780px*/
+@media screen and (max-width: 780px) {
+/* C) on n affiche pas les 1ers menus et on les affichera plus tard lorsque nous cliquerons sur Menu --> cf. D) */
+	.headlist {
+		display: none;
+		background-color: rgb(12, 11, 11);	
+	}
+}
+
+
+
+/*
+ * MENU
+ */
+
+ .menu {
+	width: 100%;
+	clear: both;
+	height: 100px;
+}
+/****GENERAL****/
+
+/* On etire le menu sur la longueur de la page et on lui donne une couleur de fond */
+.menu nav {
+	width: 100%;
+	background-color: #424558;
+}
+
+/* On utilise ">" pour ne cibler que la liste ul aui est unenfant direct de nav */
+.menu nav > ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+/* On enleve les puces de li */
+.menu nav li {
+	list-style-type: none;
+}
+
+/* On affiche seulement les elts li correspondant a nos onglets de menu en ligne (cote a cote) */
+.menu nav > ul > li {
+	float: left;
+	position: relative;
+}
+/* Un "hack" CSS (clearfix) tres connu */
+.menu nav > ul::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* On cache les sous-menus */
+.menu .submenu {
+	display: none;
+}
+
+/* On cache le menu qui devrait apparaitre lorsque la fenetre est retrecie */
+.menu nav input[type=checkbox] {
+	display: none;
+}
+.menu > nav label {
+	display: none;
+}
+
+/* On enleve le souligne des elts a et on le met sous format block*/
+.menu nav a {
+	display: inline-block;
+	text-decoration: none;
+}
+/* On etire les 1ers menu sur la longueur nav et on les mets en blanc */
+/* enft direct de enft direc ...*/
+/* ps. le padding sera reduit lorsque la souris passe dessus*/
+.menu nav > ul > li > a {
+	padding: 20px 30px;
+	color: #FFF;
+}
+
+/* on cible les sous-menus (ils vont apparaitre) lorsque la souris sur le premier menu */
+/* position: absolute on va appliquer a l elt un positionnement par rapport a son parent le plus proche
+ * le parentdoit avoir un postionnement not equal to static
+ * top, left, right et bottom : fonctionnent
+ */
+ .menu nav li:hover .submenu {
+	display: inline-block;
+	position: absolute;
+	top: 100%;
+	left: 0px;
+	padding: 0px;
+	z-index: 1000;	/* les sous menus s affichent au dessus de tout le reste */
+}
+/* on etire les sous menus*/
+.menu .submenu li a {
+	padding: 15px 30px;
+	font-size: 13px;
+	color: #222538;
+	width: 270px;
+}
+/* on rajoute une bordure basse */
+.menu .submenu li {
+	border-bottom: 1px solid #CCC;
+}
+
+/* On applique une couleur de fond sur le 1er menu lors du passage de la souris */
+/* A)  pb le 1er menu se deplace vers le bas CAR on a ajouter une bordure de 5px --> cf. B)*/
+.menu .menu-html:hover {
+	border-top: 5px solid #e44d26;
+	background-color: rgba(228, 77, 38, 0.15);
+}
+.menu .menu-css:hover {
+	border-top: 5px solid #0070bb;
+	background-color: rgba(000, 112, 192, 0.15);
+}
+.menu .menu-js:hover {
+	border-top: 5px solid #f1dc4f;
+	background-color: rgba(241, 211, 79, 0.15);
+}
+.menu .menu-contact:hover {
+	border-top: 5px solid #BBB;
+	background-color: rgba(220, 220, 220, 0.15);
+}
+/* B) on reduit le padding pour eviter le pb ci-dessus A) */
+.menu nav > ul > li:hover a {
+	padding: 15px 30px 20px 30px;
+}
+
+/* on ajoute de la couleur aux sous-menus */
+.menu .menu-html .submenu {
+	background-color: rgb(230, 100, 40);
+}
+.menu .menu-css .submenu {
+	background-color: rgb(000, 160, 240);
+}
+.menu  .menu-js .submenu {
+	background-color: rgb(250, 215, 100);
+}
+/* lorsque la souris passe sur un item de sous menu: on met le texte en blan et gras*/
+.menu .submenu li:hover a {
+	color: #EEE;
+	font-weight: bold;
+}
+/* lorsque la souris passe sur un item de sous menu: on change la couleur du fond*/
+.menu  .menu-html .submenu li:hover {
+	background-color: rgb(210, 77, 60);
+}
+.menu .menu-css .submenu li:hover {
+	background-color: rgb(000, 115, 200);
+}
+.menu  .menu-js .submenu li:hover {
+	background-color: rgb(200, 165, 75);
+}
+
+/* on traite la responsivite pour les largeurs d ecran inferieur a 780px*/
+@media screen and (max-width: 780px) {
+	/* on fait appraitre le label Menu*/
+	.menu .menu-mobile {
+		display: block;
+		color: #FFF;
+		background-color: rgba(29, 197, 151, 0.97);
+		text-align: center;
+		padding: 12px 0px;
+	}
+	/* C) on n affiche pas les 1ers menus et on les affichera plus tard lorsque nous cliquerons sur Menu --> cf. D) */
+	.menu nav ul {
+		display: none;
+	}
+	/* on affiche les menus 1ers vers le bas*/
+	.menu nav ul li, nav ul li a {
+		width: 100%;
+		text-align: center;
+	}
+	/* On ajoute un padding lors de la souris ...*/
+	.menu nav ul li a, nav ul li:hover a {
+		padding: 10px 0px;
+	}
+	/* On affiche les sous menus que lorsque ...*/
+	.menu nav li:hover .submenu {
+		display: block;
+		position: static;
+	}
+}
+/* D) on affiche les sous menus lorsque on clique sur Menu */
+.menu nav input[type=checkbox]:checked ~ ul {
+	display: block;
+}
+
+
+/*
+ * MENU2 --> cf BB
+ */
+/* On etire le menu sur la longueur de la page et on lui donne une couleur de fond */
+.main_left nav {
+	width: 100%;
+	background-color: #0ae766;
+}
+.main_left {
+	width: 15%;
+	/* height: 200px; */
+	float: left;
+	background-color: orange;
+	position: relative;
+}
+.main_left {
+	/* margin: 10% auto; */
+	width: 100 %;
+	background-color: #0ae766;
+}
+/* on retire les bullets et la marge */
+.main_left ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* on ajoute du format uniquement pour le label */
+.main_left label {
+	display: block;
+	cursor: pointer;
+	padding: 10px;
+	border: 1px solid #fff;
+	border-bottom: none;
+ }
+/*on change de couleur lorsque hover */
+.main_left label:hover {
+	background: rgb(216, 8, 235);
+}
+
+/* ?? pourquoi */
+.main_left label.last {
+	border-bottom: 1px solid #fff;
+}
+
+/* On change de couleur pour les items et on met un de marge */
+.main_left ul ul li {
+	padding: 10px;
+	background: #59ABE3;
+}
+.main_left ul ul li:hover {
+	padding: 10px;
+	background: rgb(9, 145, 236);
+	
+}
+/* ?? pourquoi On enleve les check buutons*/
+.main_left > ul > li > input[type="checkbox"]{
+	position: absolute;
+	left: -9999px;
+}
+.main_left input[type="checkbox"] ~ ul{
+	height: 0;
+	transform: scaleY(0);
+}
+.main_left input[type="checkbox"]:checked ~ ul{
+	height: 100%;
+	transform-origin: top;
+	transition: transform .2s ease-out;
+	transform: scaleY(1); 
+ }
+.main_left > ul > li > input[type="checkbox"]:checked + label{
+	background: #26C281;
+	border-bottom: 1px solid #fff;
+}
+
+
+
+/*
+ * DIAPORAMA
+ */
+.diaporama {
+	width: 100%;
+	clear: both;
+	margin: 0 auto;
+	border: 3px solid #333;
+	width: 960px;
+	height: 200px;
+}
+
+
+/*
+ * DIAPORAMA
+ */
+.main {
+	width: 100%;
+	clear: both;
+	/*height: 200px;*/
+	background-color: grey;			
+	/*height: 250px;*/
+	height: auto;
+	border: 10px solid blue;
+}
+
+
+
+.main_center {
+	width: 60%;
+	/* height: 200px; */
+	float: left;
+	background-color: green;		
+}
+
+.main_right {
+	width: 15%;
+	/* height: 200px; */
+	float: right;
+	background-color: grey;		
+
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    color: #6a6e6a;
+    font-style: italic;
+    height: 10px;
+}
+
+/*
+.div1{
+	background-color: #088;
+	height: 500px;
+	width: 50%;
+	padding: 20px;
+	border: 20px solid #0C0;
+	margin: 50px;
+}
+
+p {
+	border: 1px solid black;
+}
+*/
+
+/*
+	inline-block: combinaison des 2: l'elt est de type inline tandis que ce 
+	qu il contient (interieur de la boite) va etre considere de type block
+*/
+/*
+.p1 {
+	display: inline-block;	
+	width: 65%;
+}
+.p2 {
+	display: inline-block;
+	width: 30%;
+}
+*/
+
+
+/* position: static valeur ar defaut 
+ * top, left, right et bottom : ne fonctionnent pas
+.p1 {
+	position: static;
+	top: 150px;
+}
+ */
+
+/* position: relative l elt va etre positionner par rapport a sa position par defaut
+ * top, left, right et bottom : fonctionnent
+ * */	/* ajoute 50 px a gauche */
+ /*
+.p1 {
+	position: relative;
+	left: 50px;	
+}
+*/
+
+/* position: fixed l elt va tjrs rester a la meme place
+ * top, left, right et bottom : fonctionnent
+ * 
+.p1 {
+	position: fixed;
+	left: 50px;
+}
+*/
+
+/* position: absolute on va appliquer a l elt un positionnement par rapport a son parent le plus proche
+ * le parentdoit avoir un postionnement not equal to static
+ * top, left, right et bottom : fonctionnent
+ * 
+.div1 {
+	background-color: pink;
+	position: relative;
+	width: 500px;
+	height: 400px;
+}
+
+h1 {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
+*/
+/*
+.div1 {
+	background-color: pink;
+	width: 500px;
+	height: 400px;
+	float: right;
+	clear: left;
+}
+
+h1 {
+	float: left;
+}
+
+.p1 {
+	left: 50px;
+	float: right;
+}
+.p2 {
+	left: 50px;
+	clear: right;
+}
+*/
+/*
+ * FLEX
+ */
+/*
+ .flex-container {
+	display: flex;
+	align-items: stretch;
+	background-color: #f1f1f1;
+  }
+  
+  .flex-container > div {
+	background-color: DodgerBlue;
+	color: white;
+	width: 100px;
+	margin: 10px;
+	text-align: center;
+	line-height: 75px;
+	font-size: 30px;
+  }
+  .flex-row {
+    flex-direction: row;
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+    display: flex;
+}
+
+.flex-body {
+    display: flex;
+}
+
+.flex-body div:not([class*="flex"]) {
+    border: 1px solid white;
+    flex: 1 1 200px;
+    width: 300px;
+}
+
+
+.grid {
+	height: 300px;
+	width: 300px;
+	
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	flex-grow: 0;     
+	flex-shrink: 0;   
+	flex-basis: 125px;
+	background-color: black; 	
+  }
+  .grid > div {
+	display: flex; 
+	flex-basis: calc(33.33% - 14px);  
+	justify-content: center;
+	flex-direction: column;
+  }
+  
+  .grid > div:last-child {
+	display: flex; 
+	margin-top: 0px;
+	flex-basis: calc(100% - 22px);  
+	justify-content: center;
+	flex-direction: column;
+  }
+  
+  .grid > div > div {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+  }
+  
+.box { 
+	margin: 10px 0 10px 10px
+}
+.box1 { 
+	background-color: red; 
+	flex-grow: 2;
+}
+.box2 { 
+	background-color: orange; 
+	flex-shrink: 2;
+	margin-right: 10px;
+}
+.box3 { 
+	background-color: purple; 
+}
+.box4 { 
+	background-color: grey; 
+	
+}
+
+.list {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: rgb(228, 210, 210); 
+	
+  }
+  @media all and (min-width: 40em) {
+	.list-item {
+	  width: 50%;
+	}
+  }
+  @media all and (min-width: 60em) {
+	.list-item {
+	  width: 33.33%;
+	}
+  }
+ .list-item {
+	display: flex; 
+	padding: 0.1em;
+	width: 100%;
+  }
+ 
+  .list-content {
+	 display: flex;
+	 flex-direction: column;
+	 background-color: #fff;
+	 padding: 1em;
+	 width: 100%;
+  }
+  .list-content p {
+	flex: 1 0 auto;
+  }
+
+*/
+
+
+ .main_center  {
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 0 1rem;
+  }
+  .main_center .responsive-image {
+	max-width: 100%;
+  }
+  .main_center .cell img {
+	display: block;
+  }
+  @media screen and (min-width: 600px) {
+	.main_center .grid {
+	  display: flex;
+	  flex-wrap: wrap;
+	  flex-direction: row;
+	}
+	.main_center .cell {
+	  width: 50%;
+	}
+  }
+  @media screen and (min-width: 1000px) {
+	.main_center .cell {
+	  width: calc(100% / 3);
+	}
+  }
+  .main_center .cell {
+	margin: 1rem;
+	background-color: navy;
+  }
+  @media screen and (min-width: 600px) {
+	.main_center .cell {
+	  width: calc(50% - 2rem);
+	}
+  }
+  
+  @media screen and (min-width: 1000px) {
+	.main_center .cell {
+	  width: calc(33.3333% - 9rem);
+	}
+  }
+
+  
+
+/*
+ * CONNEXION
+ */
+/*body {font-family: Arial, Helvetica, sans-serif;}
+
+* {
+	border:1px solid red; 
+}
+
+body {
+	font-family: 'Verdana', Calibri, serif;
+	font-size: 16px;
+	margin: 0px;
+	padding: 0px;
+	background-color: rgba(64, 200, 130, 0.15);
+	height: 100%;
+}*/
+.modal * {
+	box-sizing: border-box
+	font-family: 'Verdana', Calibri, serif;
+	font-size: 16px;
+	/*margin: 0px;*/
+	/*padding: 0px;*/
+	background-color: rgba(64, 200, 130, 0.15);
+	/*font-size: 16px;*/
+	
+}
+/* Full-width input fields */
+.modal input[type=text], input[type=password] {
+	width: 100%;
+	padding: 15px;
+	margin: 5px 0 22px 0;
+	display: inline-block;
+	border: none;
+	background: #f1f1f1;
+	box-sizing: border-box;
+	text-transform: uppercase;
+	font-size: 15px;
+}
+
+/* Add a background color when the inputs get focus */
+.modal input[type=text]:focus, input[type=password]:focus {
+	background-color: #ddd;
+	outline: none;
+}
+
+/* Set a style for all buttons */
+/*
+.button {
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	opacity: 0.9;
+}
+*/
+.compte .button {
+	background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-size: 15px;
+	opacity: 0.9;
+}
+
+.modal button:hover {
+	opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.modal .cancelbtn {
+	padding: 14px 20px;
+	background-color: #f44336;
+}
+.modal .signupbtn {
+	padding: 14px 20px;
+	background-color: #4CAF50;
+}
+/* Float cancel and signup buttons and add an equal width */
+.modal .cancelbtn {
+	float: left;
+	width: 50%;
+}
+.modal .signupbtn {
+	float: left;
+	width: 50%;
+}
+	
+/* Add padding to container elements */
+.modal .container {
+	padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: #474e5d;
+	padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal .modal-content {
+	background-color: #fefefe;
+	margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+	border: 1px solid #888;
+	width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+.modal hr {
+	border: 1px solid #f1f1f1;
+	margin-bottom: 25px;
+}
+
+/* The Close Button (x) */
+.modal .close {
+	position: absolute;
+	right: 35px;
+	top: 15px;
+	font-size: 40px;
+	font-weight: bold;
+	color: #f1f1f1;
+}
+
+.modal .close:hover, .close:focus {
+	color: #f44336;
+	cursor: pointer;
+}
+
+/* Clear floats */
+.modal .clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens 
+@media screen and (max-width: 300px) {
+	.modal .cancelbtn {
+		width: 100%;
+	}
+	.modal  .signupbtn {
+		width: 100%;
+	}
+}*/

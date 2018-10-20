@@ -1,0 +1,199 @@
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	background-color: white;
+	height: 100%;
+}
+
+/* HEADER et barre de menu superieure */
+
+header {
+	height: 70px;
+	width: 100%;
+	position: fixed;
+}
+
+#title_bar {
+	width: 100%;
+	height: 70px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background-image: radial-gradient(circle at top left, red, blue);
+}
+
+#title {
+	font-size: 25px;
+	display: inline;
+	color: white;
+	text-decoration: none;
+}
+
+#menu {
+	width: 100%;
+	margin-top: 15px;
+	margin-left: 4%;
+	margin-right: 4%;
+}
+
+.hidden
+{
+	font-size: 1vw;
+	visibility: hidden;
+}
+
+.menu_link {
+	font-size: 15px;
+	color: white;
+	text-decoration: none;
+}
+
+/* Liste des categories */
+
+#cat_menu {
+	width: 100%;
+	min-width: 110px;
+	max-width: 250px;
+	background-color: white;
+	float: left;
+}
+
+#cat_tit {
+	padding-top: 60px;
+	text-align: center;
+	color: #00cc00;
+}
+
+#cat_tab {
+	background-color: white;
+	border: solid 3px #00cc00;
+	border-radius: 10px;
+	width: 80%;
+	margin-left: 10%;
+}
+
+.cat_name {
+	text-decoration: none;
+	color: #00cc00;
+}
+
+/* Contenu page*/
+
+#page {
+	margin-top: 150px;
+	width: 25%;
+	margin-bottom: 0px;
+	display: inline;
+	float: left;
+}
+
+#content {
+	width : 72%;
+	margin-top: 150px;
+	float: right;
+}
+
+.pd_mini {
+	height: 190px;
+	width: 150px;
+	background-color: #ffc266;
+}
+
+.description {
+	font-family: "Georgia";
+	text-overflow: ellipsis;
+	width: 25%;
+	min-width: 210px;
+	height: 60px;
+}
+
+.art {
+	text-decoration: none;
+	color : red;
+}
+
+#art_list {
+	width: 100%;
+}
+
+.art_pos {
+	margin: auto;
+	min-width: 210px;
+	width: 25%;
+	float:left;
+}
+
+/* FOOTER */
+
+#sign {
+	position: absolute;
+	bottom: 0;
+	color: #66ff66;
+	font-style: italic;
+	height: 40px;
+}
+
+/* LOGIN */
+
+#log_page {
+	background-image: url("http://static1.businessinsider.com/image/5820e4cb46e27a2d088b5319/these-are-the-100-new-pokmon-coming-to-pokmon-go.jpg");
+	background-repeat: no-repeat;
+	background-position: right bottom; 
+}
+
+#loglog {
+	position: absolute;
+	top: 100px;
+	width: 100%;
+}
+
+#log {
+	margin-left: 30%;
+	margin-right: 30%;
+	width: 400px;
+	box-shadow: 4px 4px 3px #1a1a1a;
+	border-radius: 5px 5px 5px 5px;
+	background-color: #b30086;
+}
+
+#log_text {
+	color: white;
+	text-align: center;
+}
+
+.log_input {
+	margin-left: 15%;
+	width: 70%;
+	min-width: 60px;
+	height: 30px;
+	font-size: 20px;
+}
+
+#log_button {
+	float: right;
+	border:none;
+	padding: 6px 4px 6px 4px;
+	border-radius: 2px;
+	box-shadow: 1px 1px 3px #aaa;
+	background: #fff;
+	font: bold 13px Arial;
+	color: #555;
+}
+
+#log_link {
+	color: white;
+	padding-left: 15px;
+	padding-bottom: 15px;
+}
+
+#no_log {
+	position:absolute;
+	top: 75px;
+	left: 0%;
+	height: 30px;
+	color: red;
+	font-style: italic;
+}

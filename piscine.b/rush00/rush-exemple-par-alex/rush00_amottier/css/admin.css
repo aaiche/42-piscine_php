@@ -1,0 +1,87 @@
+HTML {font-family: 'Open Sans', sans-serif;}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 7px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+table,
+td,
+th {
+    /*border: 1px solid #ddd;*/
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    /*width: 80%;*/
+}
+
+th,
+td {
+    padding: 2px;
+}
+
+
+input[type=text],[type=number],[type=date],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 13;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+    /*padding-bottom: 2px;*/
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: #111;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 32px;
+    margin: 50px 0 20px;
+    text-align: center;
+}
+
+h3 {
+    color: #111;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 32px;
+    margin: 50px 0 20px;
+    text-align: left;
+}
+
+h5 {
+    color: #111;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 32px;
+    margin: 50px 0 10px;
+    text-align: left;
+}
+
+h4 {
+    color: #111;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 32px;
+    margin: 50px 0 20px;
+    text-align: center;
+}

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>blah blah</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">	
+		<link rel="stylesheet" href="s.css">
+		<style>
+			.mySlides {display:none;}
+		</style>
+	</head>
+	<body>
+		<div class="site">
+			<div class="header">
+				<div class="logo">
+					<img src="images/logoVert.jpg" title="logo" alt="logo">
+				</div>
+				<div class="headlist">
+					<div class="services">
+						<ul>
+							<li>livraison 
+								<a ref=""><span class="service_extra">offerte></span></a>
+							</li>
+							<li>satisfait ou 
+									<a ref=""><span class="service_extra">rembourse></span></a>
+							</li>
+							<li>service client  
+										<a ref=""><span class="service_extra">Gratuit></span></a>
+							</li>
+						</ul>
+					</div>
+					<div class="langue">
+<!--						
+						<ul class="languagepicker">
+							<a href="#nl"><li><img src="http://i65.tinypic.com/2d0kyno.png"/>Nederlands</li></a>
+							<a href="#en"><li><img src="http://i64.tinypic.com/fd60km.png"/>English</li></a>
+						</ul>
+								
+						<ul class="languagepicker roundborders">
+							<a href="#nl"><li><img src="http://i65.tinypic.com/2d0kyno.png"/>Nederlands</li></a>
+							<a href="#en"><li><img src="http://i64.tinypic.com/fd60km.png"/>English</li></a>
+						</ul>
+					-->						
+						
+								
+						<ul class="languagepicker roundborders">
+							<a href="#fr"><li><img src="./images/flags/fr.png"/>FR</li></a>
+							<a href="#en"><li><img src="./images/flags/uk.jpg"/>UK</li></a>							
+							<a href="#de"><li><img src="./images/flags/de.png"/>DE</li></a>
+							<a href="#it"><li><img src="./images/flags/it.png"/>IT</li></a>
+						</ul>
+					</div>
+					<!--
+					<div class="langue">
+						<form method="post" action="traitement.php">
+							<select name="pays">
+								<option value="france">France</option>
+								<option value="angais">English</option>
+							</select>			
+							<input type="submit" value="Envoyer">
+						</form>
+					</div>		
+					-->		
+					<div class="search">
+						<!--	<ul>
+								<li>search</li>
+							</ul>
+						-->
+						<form>
+							<input type="text" name="search" placeholder="Produit1, Produit2, Produit3...">
+						</form>
+					</div>
+					<!--
+					<div class="search-container">
+							<form action="/action_page.php">
+							  <input type="text" placeholder="Search.." name="search">
+							  <button type="submit"><i class="fa fa-search"></i></button>
+							</form>
+						  </div>
+					-->
+			
+					<div class="promotion">
+							<ul>
+								<li>promotion</li>
+							</ul>
+					</div>
+			
+					<div class="compte">
+							<ul>
+								<button class="button" onclick="document.getElementById('id01').style.display='block'">Mon Compte</button>						
+								<div id="id01" class="modal">
+									<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+									<form class="modal-content" action="/action_page.php">
+										<div class="container">
+											<h1>Je crée mon compte</h1>
+											<p>Créez un compte pour accéder à votre espace client.<br/> Votre compte vous permettra également de suivre vos commandes, créer une liste de produits préférés...</p>
+											<hr>
+											<label for="email"><b>Mon Adresse Email*</b></label>
+											<input type="text" placeholder="Email" name="email" required>
+										
+											<label for="psw"><b>Mon Mot de Passe*</b></label>
+											<input type="password" placeholder="Mot de Passe" name="psw" required>
+										
+											<label for="psw-repeat"><b>Je confirme Mon Mot de Passe*</b></label>
+											<input type="password" placeholder="Mot de Passe" name="psw-repeat" required>
+											
+											<label>
+												<input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Se Souvenir de moi
+											</label>
+											<p>En creant mon compte j'accepte les <a href="#" style="color:dodgerblue">Termes & Contrats</a>.</p>
+											<div class="clearfix">
+												<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Annuler</button>
+												<button type="submit" class="signupbtn">Valider Mon Inscription</button>
+											</div>
+										</div>
+									</form>						  
+								</div>	
+								<button class="button" onclick="document.getElementById('id02').style.display='block'">Connexion</button>						
+								<div id="id02" class="modal">
+									<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+									<form class="modal-content" action="/action_page.php">
+										<div class="container">
+											<h1>Je Me Connecte</h1>
+											<hr>
+											<label for="email"><b>Mon Adresse Email*</b></label>
+											<input type="text" placeholder="Email" name="email" required>
+										
+											<label for="psw"><b>Mon Mot de Passe*</b></label>
+											<input type="password" placeholder="Mot de Passe" name="psw" required>																			
+											<div class="clearfix">
+												<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Annuler</button>
+												<button type="submit" class="signupbtn">Valider Mon Inscription</button>
+											</div>
+										</div>
+									</form>
+								</div>								
+								
+								<button class="button" onclick="">Mon Panier</button>						
+								<div id="id03" class="modal">
+									<form class="modal-content" action="/action_page.php">
+									</form>
+								</div>	
+							</ul>
+					</div>
+				</div>
+				
+				<!-- MENU -->
+				<div class="menu">
+					menu
+					<nav>
+						<label for="menu-mobile" class="menu-mobile">Menu</label>
+						<input type="checkbox" id="menu-mobile"	role="button">	
+						<ul>
+							<li class="menu-html"><a href="#">HTML</a>
+								<ul class="submenu">
+									<li><a href="#">Cours HTML et CSS</a></li>
+									<li><a href="#">Elements HTML</a></li>
+									<li><a href="#">Attributs HTML</a></li>
+									<li><a href="#">Exercices</a></li>
+								</ul>
+							</li>
+							<li class="menu-css"><a href="#">CSS</a>
+								<ul class="submenu">
+									<li><a href="#">Cours HTML et CSS</a></li>
+									<li><a href="#">Elements HTML</a></li>
+									<li><a href="#">Attributs HTML</a></li>
+									<li><a href="#">Exercices</a></li>
+								</ul>
+							</li>
+							<li class="menu-js"><a href="#">JavaScript</a>
+								<ul class="submenu">
+									<li><a href="#">Cours Javascript</a></li>
+									<li><a href="#">Elements HTML</a></li>
+									<li><a href="#">Attributs HTML</a></li>
+									<li><a href="#">Exercices</a></li>
+								</ul>
+							</li>
+							<li class="menu-contact"><a href="#">Contact</a></li>
+						</ul>
+						</nav>
+				</div>
+			</div>
+			<div class="diaporama">
+				<div  style="max-height:20px">
+				  	<img class="mySlides" src="images/new_carotte.jpg">
+			  		<img class="mySlides" src="images/new_champignon.jpg">
+					<img class="mySlides" src="images/new_fraise.jpg">
+		
+				</div>
+			</div>
+
+			<!-- MAIN -->
+				<div class="main">
+				<p>main</p>
+
+				<!-- MAIN_LEFT -->
+				<div class="main_left">
+					<p>main_left</p>
+						<ul>
+							<li>
+								<input type="checkbox" id="list-item-1">
+								<label for="list-item-1" class="first">Titre 1</label>
+								<ul>
+									<li><input type="checkbox"> Item 1</li>
+									<li><input type="checkbox"> Item 2</li>
+									<li><input type="checkbox"> Item 3</li>
+									<li><input type="checkbox"> Item 4</li>
+									<li><input type="checkbox"> Item 5</li>
+								</ul>
+							</li>
+							<li>
+								<input type="checkbox" id="list-item-2">
+								<label for="list-item-2">Titre 2</label>
+								<ul>
+									<li>Item A</li>
+									<li>Item B</li>
+									<li>Item C</li>
+									<li>Item D</li>
+									<li>Item E</li>
+								</ul>
+							</li>
+							<li>
+								<input type="checkbox" id="list-item-3">
+								<label for="list-item-3" class="last">Titre 3</label>
+								<ul>
+									<li>Item a</li>
+									<li>Item b</li>
+									<li>Item c</li>
+									<li>Item d</li>
+									<li>Item e</li>
+								</ul>
+							</li>
+							<li>
+								<input type="checkbox" id="list-item-3">
+								<label for="list-item-3" class="last">Prix</label>
+								<ul>
+									<li>
+										<input type="text" id="prix-min" name="prix-min" min=1 value="">
+										<label for="prix-min">Min.</label>
+										<span class="under"></span>
+									</li>
+									<li>Item e</li>
+								</ul>
+								<form onsubmit ="myFunction()">
+									<fieldset>
+										<legend>Basic Calculator:</legend>
+											<input id="left_operand" type="number" pattern="^[0-9]" title='Nombre Seulement' min="1" step="1" placeholder="Min." style="width:40px"/>										
+											<input id="right_operand" type="number" pattern="^[0-9]" title='Nombre Seulement' min="1" step="1" placeholder="Max." style="width:40px"/>										
+											<input type="submit" value="Chercher"/>
+									</fieldset>
+								</form>
+							</li>
+						</ul>					
+				</div>
+
+				<!-- MAIN_CENTER -->
+				<div class="main_center">
+					<p>main_CENTER</p>
+						 
+					<div class="grid">
+					
+						<div class="cell">							
+							<img src="images/carotte.jpg" " class="responsive-image">
+							
+							<p style="color:aqua">Image Caption</p>		
+						</div>
+						<div class="cell">
+							<img src="http://placehold.it/400x400" class="responsive-image">
+							<p style="color:aqua">Image Caption</p>	
+							<a href="#">Link</a>
+						</div>
+						<div class="cell">
+							<img src="http://placehold.it/400x400" class="responsive-image">
+							<p style="color:aqua">Image Caption</p>	
+							<a href="#">Link</a>
+						</div>
+						<div class="cell">
+							<img src="http://placehold.it/400x400" class="responsive-image">
+							<p style="color:aqua">Image Caption</p>	
+							<a href="#">Link</a>
+						</div>
+						<div class="cell">
+							<img src="http://placehold.it/400x400" class="responsive-image">
+							<p style="color:aqua">Image Caption</p>	
+							<a href="#">Link</a>
+						</div>
+						<div class="cell">
+							<img src="http://placehold.it/400x400" class="responsive-image">
+							<p style="color:aqua">Image Caption</p>	
+							<a href="#">Link</a>
+						</div>
+						<div class="cell">
+							<img src="http://placehold.it/400x400" class="responsive-image">
+							<p style="color:aqua">Image Caption</p>	
+							<a href="#">Link</a>
+						</div>
+			
+					</div>
+ 
+				</div>
+				<div class="main_right">
+						main_right
+				</div>
+
+			</div>
+			<!--
+			<footer class="footer">
+				<div>
+				  	<p>Copyright © bla blah</p>
+				</div>        
+			</footer>
+			-->
+		</div>
+
+		<script>
+			var myIndex = 0;
+			//carousel();
+
+			function carousel() {
+				var i;
+				var x = document.getElementsByClassName("mySlides");
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";  
+				}
+				myIndex++;
+				if (myIndex > x.length) {
+					myIndex = 1
+				}    
+				x[myIndex-1].style.display = "block";  
+				setTimeout(carousel, 2000); // Change image every 2 seconds
+			}
+		</script>
+	</body>
+</html>
