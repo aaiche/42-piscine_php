@@ -1,0 +1,225 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    doft.css                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: aaiche <marvin@42.fr>                      +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/01/08 18:28:09 by aaiche            #+#    #+#              #
+#    Updated: 2018/01/09 15:28:47 by aaiche           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+/* 
+ * http://meyerweb.com/eric/tools/css/reset/
+ v2.0 | 20110126
+ License: none (public domain)
+ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* FIN RESET */
+
+body {
+	background-color: #505050;
+}
+.bg:after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: url(resources/doft.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-attachment: fixed;
+	opacity: 0.2;
+	background-position-y: -77px;
+}
+
+div#site {
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 18px;
+	width:1420px;
+}
+div.commun {
+	background-color: #909090;
+	box-shadow: 10px 10px 5px black;
+	border-radius: 10px;
+}
+div#header {
+	width:1420px;
+	height:138px;
+}
+div#logo {
+	display: inline-block;
+	width:275px;
+	margin-left:13px;
+	margin-top:12px;
+}
+div#loupe {
+	display: inline-block;
+	float:right;
+	margin-top:10px;
+}
+div#bouton {
+	display: inline-block;
+	float:right;
+	margin-right:7px;
+	margin-top:7px;
+}
+div#close {
+	margin-top:76px;
+}
+div#main {
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 30px;
+	width:1360px;
+	/*background-color: yellow;*/
+	vertical-align: top;
+}
+div#main_left {
+	float: left;
+	width: 140px;
+	height: 425px;
+	text-align: center;
+	margin-top: -10px;
+
+}
+div#main_content {
+	display: inline-block;
+	width: 1006px;
+	height: 566px;
+	margin-left: 30px;
+	margin-top:-11px;
+	padding: 7px;
+
+}
+div#main_right {
+	float: right;
+	width: 140px;
+	height: 425px;
+	margin-top:-11px;
+	text-align: center;
+
+}
+div#Brik
+{
+	background-image: url("resources/brick.jpg");
+	background-repeat: repeat-x repeat-y;
+	width: 120px;
+	height: 70px;
+	margin-left: 10px;
+	margin-top: 3px;
+}
+.cadrerouge {
+	border: solid 5px red;
+	border-radius: 5px;
+}
+#main_left img {
+	margin-top: 3px;
+}
+div#welcome_message {
+	margin-top:-102px;
+	margin-left:-45px;
+	background-color: #88FF89;
+	width: 520px;
+	height: 170px;
+	box-shadow: 10px 10px 5px black;
+	border-radius: 10px;
+	position: relative;
+}
+div#dial {
+	margin-top: 32px;
+	margin-left: 10px;
+
+}
+p {
+	font-family: sans-serif;
+	font-size: 1.13em
+}
+span.entrez {
+	font-size: 2.14em;
+	font-family: serif;
+}
+span.bonjour {
+	line-height : 22px;
+	font-style: italic;
+}
+span.ordinateurs {
+	text-shadow: 7px 7px 8px #FF0000;
+	margin-top: -5px;
+}
+form {
+	margin-left:13px;
+	margin-top: -16px;
+}
+input[type=text] {
+	width: 73%;
+}
+input[type=button] {
+	width: 80px;
+	margin-left: 13px;
+}
+img#avancer {
+	margin-top: 15px;
+}
+img#prendre {
+	margin-left: -3px;
+}
+img#utiliser {
+	margin-left: -3px;
+}
+img#book {
+	margin-top: 15px;
+}
+img#towel {
+	margin-top: 3px;
+}

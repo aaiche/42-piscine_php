@@ -1,0 +1,89 @@
+le serveur stocke les data
+le client demande au serveurs des donnees
+
+VOIR ~/http
+
+client> se connecter au serveur
+	mysql -aaiche -p
+
+1) Quelles sont ttes les db accessibles: 
+	show databases;
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+4 rows in set (0.00 sec)
+
+2) utiliser une db
+	use db_name
+
+3) show tables pour voir ttes les tables dans db
+
+
+select * from table;
+
+describe table_name	pour ts les chanps
+
+
+5) recuperer les 10 premiers
+select id_film, titre from table_name limit 10;
+
+select id_film, titre from table_name ORDER BY titre limit 10;
+
+recuperer les 20 derniers filsm
+select id_film, titre from table_name ORDER BY titre DESC limit 10;
+
+teir en fonction de
+select id_film, titre, annee_prod from table_name WHERE annee_prid != 0 ORDER BY titre DESC limit 10;
+
+
+9) count
+select count(*) from table_name WHERE annee_pxrid >2005 AND annee_prod < 2007  0 ORDER BY titre ;
+
+abvoir lanee la + ancienne
+select max(annee_prod) from table_name WHERE annee_pxrid >2005 AND annee_prod < 2007  0 ORDER BY titre ;
+
+
+20) jointure : regrouper les donnees entre 2 tables
+select * from film INNER JOIN genre ON film.id_genre=genre.id_genre WHERE genre.id_genre=25;
+==> considere 
+
+30) nbre de films par categorier: on va regrouper
+select count(*), id_genre FROM film GROUP BY id_genre
+
+
+40) supprimer DELETE
+DELETE FROM genre id_genre=29;
+
+50) inserer en precisant les noms de champs
+INSERT INTO genre ("id_genre", "", ) VALUES ("Test", ...);
+
+50) upadte
+UPDATE genre SET nom="test" WHERE genre_id=29
+
+60) comment creer tables
+describe old_table ==> pour avoir une idee
+
+CREATE TABLE  Test (tous lesc champas)
+
+CREATE TABLE  Test (nom VARCHAR(255), id INT PRIMARY KEY AUTO_INCREMENT); 
+
+INSERT INTO genre ("id_genre", "", ) VALUES ("Test", ...);
+
+===============================================
+CREATE DATABASE testDB;
+DROP DATABASE databasename;
+
+CREATE TABLE Persons (
+    PersonID int,
+	    LastName varchar(255),
+		    FirstName varchar(255),
+			    Address varchar(255),
+				    City varchar(255) 
+					);
+
