@@ -1,0 +1,27 @@
+
+<- Vertex ----------------------------------------------------------------------
+
+This Class expects the Color Class to be available.
+
+An instance can be constructed from either from (x, y, z, [w], [color]). The coordinate w defaults to 1.0 and color to white value:
+	- (x, y, z) coordinates value:
+		new Vertex( array( 'x' => 3.0, 'y' => 3.0, 'z' => 3.0 ) );
+	- (x, y, z, w) coordinates value:
+		new Vertex( array( 'x' => 9.0, 'y' => 9.0, 'z' => 9.0, 'w' => 3.0 ) );
+	- (x, y, z, w, color) coordinates value:
+		$blue  = new Color( array( 'red' =>   0, 'green' =>   0, 'blue' => 255 ) );
+		new Vertex( array( 'x' => 0.0, 'y' => 0.0, 'z' => 1.0, 'color' => $blue  ) );
+	if 
+
+x, y, w input are expected to be numeric (!!float!!) values
+Any other use is undefined behaviour.
+
+The class provides the following static methods :
+
+Vertex   doc();
+Displays the associated help file
+
+Vertex   SetVerbose('[True|False]');
+Displays more informative messages. Any other values than 'True' or 'False' are equivalent to 'False'
+
+---------------------------------------------------------------------- Vertex ->
