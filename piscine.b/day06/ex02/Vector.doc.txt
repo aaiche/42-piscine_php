@@ -1,0 +1,35 @@
+
+<- Vector ----------------------------------------------------------------------
+This Class expects the Vertex Class to be available.
+
+An instance can be constructed from either from (orig, [dest]). 
+	- orig : is a Vertex instance
+	- dest : is a Vertex instance, defaults to Vertex with the following values x=0, y=0, z=0, w=1 
+
+The class provides the following static methods:
+
+Vertex   doc();
+Displays the associated help file
+
+Vertex   SetVerbose('[True|False]');
+Displays more informative messages. Any other values than 'True' or 'False' are equivalent to 'False'
+
+The following methods are available:
+- $vector->magnitude() 					: returns the magnitude (length) of $vector
+
+- $vector->normalize() 					: returns a new vector normalized ===> enonce pas tres clair
+
+- $vector->add(Vector $v ) 				: returns a new vector $vector + $v
+
+- $vector->sub( Vector $v ) 			: returns a new vector $vector - $v
+
+- $vector->opposite() 					: returns a new vector -$vector
+
+- $vector->scalarProduct( $k )			: returns a new vector $k * $vector
+
+- $vector->dotProduct( Vector $v )		: returns the scalar dot product of $vector
+
+- $vector->cos( Vector $v ) 			: returns a scalar with value set to cos($vector, $v)
+
+- $vector->crossProduct( Vector $v )	: returns a new vector $vector ^ $v
+---------------------------------------------------------------------- Vector ->
