@@ -1,0 +1,107 @@
+<!-- *********************************************************************** -->
+<!--                                                                         -->
+<!--                                                      :::      ::::::::  -->
+<!-- doft.html                                          :+:      :+:    :+:  -->
+<!--                                                  +:+ +:+         +:+    -->
+<!-- By: aaiche <marvin@42.fr>                      +#+  +:+       +#+       -->
+<!--                                              +#+#+#+#+#+   +#+          -->
+<!-- Created: 2018/01/09 15:31:53 by aaiche            #+#    #+#            -->
+<!-- Updated: 2018/03/09 14:22:16 by aaiche           ###   ########.fr      -->
+<!--                                                                         -->
+<!-- *********************************************************************** -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Day of the 42</title>
+		<link rel="stylesheet" href="doft.css">
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			#main_content{
+				position:relative;
+			}
+			.img-magnifier-glass {
+				position: absolute;
+				border: 3px solid #000;
+				border-radius: 50%;
+				cursor: none;
+				/*Set the size of the magnifier glass:*/
+				width: 200px;
+				height: 200px;
+			}
+		</style>
+	</head>
+	<body onclick="sm(event)">
+		<div id="site">
+			<div id="header" class="commun">
+				<div id="logo">
+					<img id="id_day_of_the_42" src="resources/day_of_the_42.png" title="day_of_the_42" alt="day_of_the_42" width="420px" alt="day">
+				</div>
+				<div id="bouton">
+					<div id="reload">
+						<a href="http://www.disney.com" target="_blank">
+							<img src="resources/reload.png" alt="reload" title="Recommencer au début" width="20px">
+						</a>
+					</div>
+					<div id="close">
+						<a href="http://www.relaischateaux.com" target="_blank">
+							<img src="resources/close.gif" alt="close" title="close" width="20px">
+						</a>
+					</div>
+				</div>
+				<div class="hidden" id="id_loupe" onclick="magnify('id_cluster', 3)">
+					<img src="resources/loupe.png" title="loupe" alt="loupe">
+				</div>
+			</div>
+			<div id="main">
+				<div id="main_left" class="commun">
+					<img class="hidden" src="resources/arrow.png" width="70px" alt="Avancer" title="Avancer" id="id_avancer">
+					<img class="hidden" src="resources/main.png" width="70px" alt="Prendre”" title="Prendre" id="id_prendre"> 
+					<img class="hidden" src="resources/oeil.png" width="70px" alt="Regarder" title="Regarder"  id="id_regarder" class="cadrerouge">
+					<img class="hidden" src="resources/outil.png" width="70px" alt="Utiliser" title="Utiliser"  id="id_utiliser">
+					<img src="resources/chat-icon.png" width="70px"  alt="Parler" title="Parler" id="id_parler">
+				</div>
+				<div id="main_content" class="commun">
+					<img class="hidden" id="id_cluster" src="resources/cluster.jpg" width="1000px" height="564px"  alt="cluster" title="cluster" usemap="#clustermap">
+					<map name="clustermap">
+						<area shape="rect" coords="320,325,465,550" alt="Ikea" title="www.ikea.com" href="http://www.ikea.com" target="_blank" >
+						<area shape="rect" coords="790,315,980,500" alt="Apple" title="www.apple.com" href="http://www.apple.com" target="_blank">
+						<area id="id_architecture" shape="rect" coords="960,520,995,525" alt="" title="architecture"/>
+					</map>
+				</div>
+				<div id="main_right" class="commun">
+					<img class="hidden" src="resources/book.png" width="70px" title="book" alt="book" id="id_book">
+					<img class="hidden" src="resources/towel.png" width="70px" title="towel" alt="towel" id="id_towel" >
+					<div class="hidden" id="id_brik" title="mur"></div>
+				</div>
+			</div>
+			<div id="id_welcome_message" class="hidden">
+					<div id="dial">
+						<p id="id_text" class="hidden">
+							<span class="bonjour" id="id_span">bonjour, besoin d'aide ?<span>
+						</p>
+						<p id="id_password" class="">
+							vous voulez <span class="entrez">entrer</span> dans une grande piece remplie
+							d'<span class="ordinateurs">ordinateurs.</span>...<br >
+							<span class="bonjour">- mot de passe ?</span>
+						</p>
+					</div>
+				<form action="" class="form">
+					<div id="id_text_form" class="hidden">
+						<input id="id_text_message" type="text" value="">
+						<input id="id_text_repondre" type="button" value="Repondre">
+					</div>
+					<div id="id_password_form" class="">
+						<input id="id_input_password"  size="45" type="password" value="">
+						<input id="id_password_repondre" type="button" value="Repondre">
+					</div>
+				</form>
+			</div>
+		</div>
+		<script src="loupe.js"></script>
+		<script src="chat.js"></script>
+	</body>
+</html>

@@ -1,0 +1,121 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    responsive.css                                     :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: aaiche <marvin@42.fr>                      +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/01/09 15:33:42 by aaiche            #+#    #+#              #
+#    Updated: 2018/01/09 15:38:33 by aaiche           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* FIN RESET */
+body
+{
+	font-size: 2vw;
+}
+img
+{
+	max-width: 400px;
+	width: 100%;
+}
+table {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 2px;
+}
+td {
+	padding: 0;
+	/*border: 1px solid white;*/
+}
+td.Green {
+	background-color: Green;
+}
+td.Aqua {
+	background-color: Aqua;
+}
+td.Coral {
+	background-color: Coral;
+}
+td.Fuchsia {
+	background-color: Fuchsia;
+}
+td.DarkTurquoise {
+	background-color: DarkTurquoise;
+}
+td.Lime {
+	background-color: Lime;
+}
+td.Red {
+	background-color: Red;
+}
+td.Salmon {
+	background-color: Salmon;
+}
+td.Pink {
+	background-color: Pink;
+}
+td.GreenYellow {
+	background-color: GreenYellow;
+}
+td.Gold {
+	background-color: Gold;
+}
+div.poids {
+	width: auto;
+	text-align: right;
+	margin-right: 3px;
+}
+div.symbole {
+	width: auto;
+	text-align: center;
+	font-size: 1.5em;
+}
+div.numero {
+	width: auto;
+	text-align: left;
+	margin-left: 3px;
+}

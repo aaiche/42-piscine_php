@@ -1,0 +1,71 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    style.css                                          :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: aaiche <marvin@42.fr>                      +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/01/09 17:44:09 by aaiche            #+#    #+#              #
+#    Updated: 2018/01/09 17:49:03 by aaiche           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+/*Strip the ul of padding and list styling*/
+ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	position: absolute;
+}
+/*Create a horizontal list with spacing*/
+li {
+	display:inline-block;
+	float: left;
+	margin-right: 1px;
+}
+/*Style for menu links*/
+li a {
+	display:block;
+	min-width:140px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	font-family: Arial;
+	color: #fff;
+	text-decoration: none;
+	background: DeepSkyBlue;
+}
+/*Hover state for top level links*/
+li:hover a {
+	background: Grey;
+}
+/*Style for dropdown links*/
+li:hover ul a {
+	background: Grey;
+	color: White;
+	height: 40px;
+	line-height: 40px;
+	text-align: left;
+}
+/*Hover state for dropdown links*/
+li:hover ul a:hover {
+	color: White;
+	background: DeepSkyBlue;
+}
+/*Hide dropdown links until they are needed*/
+li ul {
+	display: none;
+}
+/*Make dropdown links vertical*/
+li ul li {
+	display: block;
+	float: none;
+}
+/*Prevent text wrapping*/
+li ul li a {
+	padding: 0 20px;
+}
+/*Display the dropdown on hover*/
+ul li a:hover + .hidden, .hidden:hover {
+	display: block;
+}
